@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <script type='text/javascript' src='http://admin.blackrockblog.com/wp/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+  <script type='text/javascript' src='http://admin.blackrockblog.com/wp/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+  <script type='text/javascript' src='https://blackrockblog.scdn4.secure.raxcdn.com/content/themes/blackrock/inc/mobile-menu/mobile-menu.js?ver=4.3'></script>
+  <script type='text/javascript' src='https://blackrockblog.scdn4.secure.raxcdn.com/content/plugins/huge-mailchimp/js/scrollTo.js?ver=1.2.14'></script>
+  <script type='text/javascript' src='http://admin.blackrockblog.com/wp/wp-includes/js/jquery/jquery.form.min.js?ver=3.37.0'></script>
+  <script type='text/javascript' src='https://blackrockblog.scdn4.secure.raxcdn.com/content/plugins/huge-search-in-place/js/codepeople_shearch_in_place.js?inval=3.5&#038;ver=4.3'></script>
+  <script type='text/javascript' src='https://blackrockblog.scdn4.secure.raxcdn.com/content/plugins/wp-d3/js/d3.3.5.5.min.js?ver=1.0.0'></script>
+
+
+  <link data-require="bootstrap-css@*" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+
+  <script data-require="jquery@*" data-semver="2.1.4" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+
+
+
+  <link rel="stylesheet" type="text/css" href="dt.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel='stylesheet' id='codepeople-search-in-place-style-css' href='https://blackrockblog.scdn4.secure.raxcdn.com/content/plugins/huge-search-in-place/css/codepeople_shearch_in_place.css?ver=4.3' type='text/css' media='all' />
+  <link rel='stylesheet' id='wordpress-popular-posts-css' href='https://blackrockblog.scdn4.secure.raxcdn.com/content/plugins/huge-wordpress-popular-posts/style/wpp.css?ver=4.3' type='text/css' media='all' />
+  <link rel='stylesheet' id='normalize-css' href='https://blackrockblog.scdn4.secure.raxcdn.com/content/themes/blackrock/normalize.min.css?ver=1447112317' type='text/css' media='all' />
+  <link rel='stylesheet' id='foundation-css' href='https://blackrockblog.scdn4.secure.raxcdn.com/content/themes/blackrock/foundation.css?ver=1447112337' type='text/css' media='all' />
+  <link rel='stylesheet' id='brstyle-css' href='https://blackrockblog.scdn4.secure.raxcdn.com/content/themes/blackrock/style.css?ver=1447112305' type='text/css' media='all' />
+  <script src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+  <script src="assumptionTableData.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body id="simple">
+  <div class="se-pre-con"></div>
+  <div class="container-fixed">
+
+    <nav id="printNav" class="navbar navbar-default .navbar-fixed-top visible-print-block ">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div id="printDate" class="navbar-brand"></div>
+        </div>
+      </div>
+    </nav>
+    <nav id="sbNavBar" class="navbar navbar-default .navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.blackrock.com/corporate/en-us/insights/blackrock-investment-institute" target="_blank">BlackRock Investment Institute</a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav navbar-right ">
+            <li><a href="javascript:printer()"><span class="glyphicon glyphicon-print"></span> Print</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="center pad">
+      <div class="panel-body lessPaddingTop">
+
+        <div id="profDisc">FOR PROFESSIONAL / QUALIFIED / WHOLESALE INVESTORS ONLY – NOT FOR RETAIL CLIENTS</div>
+        <div class="col-sm-10 ">
+          <h1 id="mainHeader">CAPITAL MARKET ASSUMPTIONS</h1></div>
+        <div class="col-md-2 hidden-print">
+          <h4 id="mainHeaderDate"></h4></div>
+        <div class="col-sm-12 ">
+          <ul class="currency nav nav-pills">
+
+            <li role="presentation" id="USD" class="cbutton active">
+              <a href="#"><img src="https://s3.amazonaws.com/blackrockblog-blanktemplate-assets/images/CapitalMarketAssumptions/usFlag.png" width="40px" height="auto"> USD PERSPECTIVE</a>
+            </li>
+            <li role="presentation" id="EUR" class="cbutton hidden-print">
+              <a href="#"><img src="https://s3.amazonaws.com/blackrockblog-blanktemplate-assets/images/CapitalMarketAssumptions/euFlag.png" width="40px" height="auto">EUR PERSPECTIVE</a>
+            </li>
+            <li role="presentation" id="GBP" class="cbutton hidden-print">
+              <a href="#"><img src="https://s3.amazonaws.com/blackrockblog-blanktemplate-assets/images/CapitalMarketAssumptions/ukFlag.png" width="40px" height="auto">GBP PERSPECTIVE</a>
+            </li>
+            <li role="presentation" id="CHF" class="cbutton hidden-print">
+              <a href="#"><img src="https://s3.amazonaws.com/blackrockblog-blanktemplate-assets/images/CapitalMarketAssumptions/chFlag.png" width="40px" height="auto">CHF PERSPECTIVE</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="center pad  ">
+      <div id="intro" class="panel-body lessPaddingBottom">
+        <div id="firstPara">
+          <p2>The BlackRock Investment Institute publishes capital market assumptions every quarter. We cover two time horizons: 10-year-plus capital markets assumptions that can be used as key inputs for strategic asset allocation, and five-year assumptions
+            that take into account how we think current economic and market conditions will play out in the medium term.</p2>
+            <br>
+        </div>
+      </div>
+    </div>
+    <div class="center pad">
+      <div class="panel-body lessPaddingBottom lessPaddingTop">
+        <h3 id="assumptionsHeader" class="h3Header">Asset Class Return and Long-Term Volatility Assumptions</h3>
+        <ul class="nav nav-pills lessPaddingTop ">
+          <li role="presentation" id="fiveYear" class=" sbutton active"><a href="#">5-Year</a></li>
+          <li role="presentation" id="tenYear" class=" sbutton hidden-print"><a href="#tenYear">10-Year Plus</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="center pad ">
+      <div class="panel-body lessPaddingTop">
+        <div id="scatterChart"></div>
+        <div id="hoverNote" class="hidden-print">Hover over any dot for more details</div>
+        <div id="scatterSource" class="footnote source">
+        </div>
+        <div id="scatterNote" class="footnote notes">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="center pad  ">
+      <div id="keyPoints" class="panel-body lessPaddingTop  lessPaddingBottom">
+
+        <p2>Our five-year return assumptions for equities and bonds are near post-financial crisis lows. Three overarching points to keep in mind:</p2>
+        <ul class="sbBullets">
+          <li class="updateBullet">We expect compressed market returns in the next five years due to stretched valuations and moderate economic growth. Our base case calls for 2% real GDP growth for advanced economies, inflation below central banks’ targets and 4% to 5% growth
+            in emerging markets. </li>
+          <li class="updateBullet">We see equities outperforming fixed income in the medium term. Our economic base case and the valuation gap between equities and bonds support the case for strong performance from equities relative to fixed income over the next five years.</li>
+          <li class="updateBullet">Our five-year return assumptions are lower than our long-term assumptions due to our views on current valuations and macro-economic conditions. Our 10-year-plus capital market assumptions are based on normalized valuations and interest rate
+            levels, and are driven by five risk premia: equity, duration, inflation, credit and illiquidity.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="center pad pBreak">
+      <div class="panel-body lessPaddingBottom lessPaddingTop">
+        <h3 id="tableHeader" class="h3Header ">ASSET CLASS RETURN AND LONG-TERM VOLATILITY AND CORRELATION ASSUMPTIONS</h3></div>
+    </div>
+    <div class="container fourteen">
+      <div class="row panel-body lessPaddingBottom lessPaddingTop">
+        <div class="col-xs-6">
+          <h4 id="headerInfo" class="hidden-print">Click on arrows to sort table</h4>
+        </div>
+        <div class="col-xs-6">
+          <h4 id="headerInfoLogo" class="hidden-print"><img src="https://s3.amazonaws.com/blackrockblog-blanktemplate-assets/images/CapitalMarketAssumptions/infoIcon.png"> = Underlying index used </h4>
+        </div>
+      </div>
+
+
+      <table id="rtnExptTable" class="cell-border display compact">
+        <thead>
+          <tr id="sbHeader" class="sbTable-HeaderGeneric" style="border:1px">
+            <th>Asset Class</th>
+            <th>Asset</th>
+            <th>5-year Expected Return</th>
+            <th>10-Year + Expected Return</th>
+            <th>10 -Year + Expected Volatility</th>
+            <th>10-Year + Correlation Global Equities</th>
+            <th>10-Year + Correlation Global Treasuries</th>
+            <th></th>
+          </tr>
+        </thead>
+      </table>
+
+      <div id="rtnExptTableSource" class="footnote source">
+      </div>
+      <div id="rtnExptTableNote" class="footnote notes">
+      </div>
+    </div>
+    <div class="center pad pBreak">
+
+    </div>
+    <div class="center pad">
+      <div class="panel-body lessPaddingTop">
+        <h3 class="h3Header ">OUR THINKING ON CAPITAL MARKET RETURN ASSUMPTIONS </h3>
+        <p2>Our five-year assumptions can help investors adjust their strategic asset allocation when valuations and macroeconomic conditions substantially deviate from ‘normal’ levels. They incorporate valuation signals and a macroeconomic scenario described
+          in the tables further below. Our assumptions have gradually come down since the financial crisis. The chart below illustrates this from a UK currency perspective. </p2>
+      </div>
+    </div>
+
+
+    <div class="center pad">
+      <div class="panel-body">
+
+        <div id="equityChart"></div>
+
+        <div id="rtnAssumpChartSource" class="footnote source"> </div>
+      </div>
+    </div>
+
+    <div class="center pad">
+      <div class="panel-body lessPaddingBottom">
+        <div class="paraPadding">
+          <p2>Our 10-year-plus assumptions reflect ‘equilibrium’ or ‘valuation-neutral’ market conditions that we would expect in the long run. Our approach is based on the capital asset pricing model, which holds that each asset class earns a return equal
+            to the risk-free rate plus a risk premium. For an in-depth discussion of our 10-year-plus assumptions as well as details on our use of BlackRock proxies for some asset classes, see our  <a href="#" class="linker">Long-Term Capital Market Assumptions</a> publication. We detail our thinking on strategic asset allocation
+            in our quarterly <a href="https://www.blackrock.com/institutions/en-gb/literature/publication/strategic-perspectives-october-2015-en-zz.pdf" class="linker">Strategic Perspectives</a> publications.
+          </p2>
+        </div>
+        <div class="paraPadding">
+          <p2>Our Capital Markets Assumptions Group is responsible for formulating the assumptions. The group consists of senior members from the BlackRock Investment Institute, BlackRock Solutions, and BlackRock’s Risk and Quantitative Analysis group, combining
+            experience in portfolio management, economics, central bank policy setting, asset allocation and risk management.</p2>
+        </div>
+        <p2>
+          The tables below describe how we arrive at out five-year return assumptions for equity, government bond and credit markets.
+        </p2>
+
+      </div>
+    </div>
+
+    <div class="center pad pBreak">
+      <div class="panel-body lessPaddingTop">
+        <h3 class="h3Header ">Equity Five-Year Return Assumptions</h3>
+        <p2>To arrive at our five-year equity return assumptions, we decompose returns into four components shown in the table below: </p2>
+      </div>
+    </div>
+
+    <div class="container fourteen">
+
+      <table id="equityReturnAssumpTable" class="table table-condensed table-bordered detailTable">
+        <thead>
+          <tr class="sbTable-Header">
+            <th id="eqCompHeader" class="vert-align" colspan="2">COMPONENTS OF FIVE-YEAR EQUITY RETURN ASSUMPTIONS</th>
+            <th id="eqCompHeader" class="vert-align horiz-align">US</th>
+            <th id="eqCompHeader" class="horiz-align">DM EX-US</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="vert-align" rowspan="2">Income</td>
+            <td>Dividend yield. This is derived from consensus dividend forecasts for the current year.</td>
+            <td class="target1">-</td>
+            <td class="target1">-</td>
+          </tr>
+          <tr>
+            <td>Change in the number of shares outstanding.</td>
+            <td id='cell1' class="target1">0%</td>
+            <td class="target1">-</td>
+          </tr>
+          <tr>
+            <td class="vert-align" rowspan="3">Earnings growth</td>
+            <td>We use nominal GDP growth as a starting point for our earnings growth projections. See the table below for our real GDP and inflation assumptions.</td>
+            <td class="target1 vert-align">-</td>
+            <td class="target1 vert-align">-</td>
+          </tr>
+          <tr>
+            <td>We adjust our GDP forecasts to reflect how corporations report revenues and earnings. Companies include the production of goods and services outside their home markets in their revenues and earnings (in contrast to how GDP is estimated by
+              national accounts). </td>
+            <td class="target1 vert-align">-</td>
+            <td class="target1 vert-align">-</td>
+          </tr>
+          <tr>
+            <td>We revise this upward or downward, depending on where earnings are relative to their long-term averages. We assume mean reversion (see the table below for earnings trend forecasts). </td>
+            <td class="target1 vert-align">-</td>
+            <td class="target1 vert-align">-</td>
+          </tr>
+          <tr>
+            <td class="vert-align">Re-pricing </td>
+            <td>By comparing current price/earnings multiples with our fair-value estimates, we assess the return potential from multiple expansion or contraction. See the table below for fair-value estimates.</td>
+            <td class="target1 vert-align">-</td>
+            <td class="target1 vert-align">-</td>
+          </tr>
+          <tr>
+            <td class="vert-align" rowspan="2">Adjustments</td>
+            <td>We adjust for rounding errors and implement a subjective overlay to our model’s output.</td>
+            <td class="target1 vert-align">-</td>
+            <td class="target1 vert-align">-</td>
+          </tr>
+
+          <tr>
+            <td>The local risk-free (cash) rate has an effect on the overall level of returns for investors in their geographies. This table shows returns in US dollars, so we adjust for the different risk-free cash returns between local-currency cash and
+              US cash.
+            </td>
+            <td class="target1 vert-align">-</td>
+            <td class="target1 vert-align">-</td>
+          </tr>
+
+          <tr class="active">
+            <th class="vert-align" rowspan="2">Annualised equity returns</th>
+            <th class="right-align">Overall geometric assumption</th>
+            <th class="target1 vert-align">-</th>
+            <th class="target1 vert-align">-</th>
+
+          </tr>
+
+          <tr class="active">
+
+            <th class="right-align">Equivalent arithmetic assumption</th>
+            <th class="target1 vert-align">-</th>
+            <th class="target1 vert-align">-</th>
+
+          </tr>
+        </tbody>
+      </table>
+      <div id="equityReturnAssumpTableSource" class="footnote source"> </div>
+    </div>
+
+
+
+    <div class="center pad">
+      <div class="panel-body">
+
+        <p2>The table below shows how we derive the earnings growth and repricing estimates shown above. These are driven by our views on real GDP growth, inflation and where corporate earnings are relative to their historical trends. </p2>
+      </div>
+    </div>
+
+    <div class="container fourteen">
+
+
+      <table id="equityMacroTable" class="table table-condensed table-bordered detailTable">
+        <thead>
+          <tr class="sbTable-Header">
+            <th id="eqCompHeader" class="vert-align" colspan="2">FIVE-YEAR MACRO OUTLOOK USED FOR EQUITY RETURN ASSUMPTIONS</th>
+            <th id="eqCompHeader" class="horiz-align">US</th>
+            <th id="eqCompHeader" class="horiz-align">EU</th>
+            <th id="eqCompHeader" class="horiz-align">UK</th>
+            <th id="eqCompHeader" class="horiz-align">JAPAN</th>
+            <th id="eqCompHeader" class="horiz-align">EM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="vert-align">Real GDP growth</td>
+            <td>We see GDP growth in advanced economies being supported by ultra-loose monetary policies, strengthening employment and lower oil prices in the next five years. We expect growth in emerging economies to gradually move toward a slower, but more
+              sustainable, annual level of 4.5% in the period.</td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+          <tr>
+            <td class="vert-align">Inflation (core CPI)</td>
+            <td class="vert-align">Our five-year inflation assumptions for the US, UK and EU are 0.25% below our long-term expectations. For Japan, they are 0.5% below our long-term expectations. </td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+          <tr>
+            <td class="vert-align">Earnings trends</td>
+            <td class="vert-align">Projected earnings reflect earnings trends in each market, but also the extent to which earnings deviate from their long-term trends. We estimate earnings are above their long-term trends in the US and Japan, but below trend in Europe and
+              emerging markets. This suggests the potential for faster earnings growth in the latter economic areas.</td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+          <tr>
+            <td class="vert-align">Equity fair value</td>
+            <td class="vert-align">The level of price/earnings ratios that we believe represents fair value for each economic area.</td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+      <div id="equityMacroTableSource" class="footnote source"> </div>
+    </div>
+
+
+
+    <div class="center pad pBreak ">
+      <div class="panel-body">
+        <h3 class="h3Header">GOVERNMENT BOND FIVE-YEAR RETURN ASSUMPTIONS </h3>
+        <p2>Our five-year return assumptions for government bonds have four components that are shown in the table below: </p2>
+      </div>
+    </div>
+
+    <div class="container fourteen">
+
+      <table id="bondReturnAssumpTable" class="table table-condensed table-bordered detailTable">
+        <thead>
+          <tr class="sbTable-HeaderBonds">
+            <th id="bondHeader" class="vert-align" colspan="2">COMPONENTS OF GOVERNMENT BOND FIVE-YEAR RETURN ASSUMPTIONS</th>
+            <th id="bondHeader" class="vert-align horiz-align">US</th>
+            <th id="bondHeader" class="vert-align horiz-align">EU</th>
+            <th id="bondHeader" class="vert-align horiz-align">UK</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td class="vert-align">Yield</td>
+            <td class="vert-align">Our expectations for average 10-year bond yields over the next five years. See the tables below for calculation details.</td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+
+          <tr>
+            <td class="vert-align">Valuation</td>
+            <td class="vert-align">We approximate the annual valuation impact of our assumptions about yield movements by multiplying the duration by the annualised yield change.</td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+          <tr>
+            <td class="vert-align">Roll-down impact</td>
+            <td class="vert-align">The maturity of a bond shortens over time. Upward sloping yield curves make this a positive valuation impact. The steeper the curve, the bigger the impact.</td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+
+          <tr>
+            <td rowspan="2" class="vert-align">Adjustments</td>
+            <td class="vert-align">We adjust for rounding errors and implement a subjective overlay to our model’s output.</td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+
+          <tr>
+
+            <td class="vert-align">The local risk-free (cash) rate has an effect on the overall level of returns for investors in their geographies. This table shows returns in US dollars, so we adjust for the different risk-free cash returns between local-currency cash and
+              US cash.
+            </td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+
+          <tr class="active">
+            <th rowspan="2" class="vert-align">Annualised government bond returns</th>
+            <th class="vert-align right-align">Overall geometric assumption</th>
+            <th class="target1 vert-align"></th>
+            <th class="target1 vert-align"></th>
+            <th class="target1 vert-align"></th>
+          </tr>
+
+          <tr class="active">
+
+            <th class="vert-align right-align">Equivalent arithmetic assumption</th>
+            <th class="target1 vert-align"></th>
+            <th class="target1 vert-align"></th>
+            <th class="target1 vert-align"></th>
+          </tr>
+
+
+        </tbody>
+
+      </table>
+      <div id="bondReturnAssumpTableSource" class="footnote source"> </div>
+    </div>
+
+    <div class="center pad">
+      <div class="panel-body">
+
+        <p2>Our projections of average 10-year government bond yields (the first component described in the table above) are derived from our long-term expectations for inflation, inflation risk premia and real rates. See the two tables below. </p2>
+      </div>
+    </div>
+
+
+    <div class="container fourteen">
+
+      <table id="bondMacroTable" class="table table-condensed table-bordered detailTable">
+        <thead>
+          <tr class="sbTable-HeaderBonds">
+            <th id="bondHeader" class="vert-align" colspan="2">ASSUMPTIONS UNDERLYING LONG-TERM GOVERNMENT BOND RETURNS</th>
+            <th id="bondHeader" class="vert-align horiz-align">US</th>
+            <th id="bondHeader" class="vert-align horiz-align">EU</th>
+            <th id="bondHeader" class="vert-align horiz-align">UK</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="vert-align">Long-term inflation (core CPI)</td>
+            <td class="vert-align">We expect central banks to meet their core inflation targets in the long run.</td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+          <tr>
+            <td class="vert-align">Real rate: Ultra-long maturities</td>
+            <td class="vert-align">We assume that normalised real interest rates on long-term bonds are 2% in the US and EU. In the UK, we assume a lower rate due to structural demand from institutional investors for long-dated government bonds.</td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+
+          <tr>
+            <td class="vert-align">Real rate: 10-year maturities</td>
+            <td class="vert-align">We assume that 10-year yields are around 0.25% below ultra-long yields in the US and EU, reflecting an upward-sloping yield curve in which additional return is required for taking more duration risk (a positive term premium). In the UK, we
+              assume a flat nominal yield curve and downward sloping real yield curve beyond 10 years. Therefore, we assume the 10-year UK real rate is higher than the 50-year rate. </td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+          <tr>
+            <td class="vert-align">Time to reach normalised yield levels</td>
+            <td class="vert-align">We expect eurozone bond yields to reach their normalized long-term level in 10 years’ time given low inflationary pressures. By contrast, we see US and UK bond yields reaching their long-term levels within seven years. </td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+
+        </tbody>
+      </table>
+      <div id="bondMacroTableSource" class="footnote source"> </div>
+    </div>
+    <br>
+    <div class="container fourteen">
+
+      <table id="avgBondYieldsTable" class="table table-condensed table-bordered detailTable">
+        <thead>
+          <tr class="sbTable-HeaderBonds">
+            <th id="bondHeader" class="vert-align" colspan="2">DERIVING AVERAGE 10-YEAR BOND YIELDS OVER THE NEXT FIVE YEARS</th>
+            <th id="bondHeader" class="vert-align horiz-align">US</th>
+            <th id="bondHeader" class="vert-align horiz-align">EU</th>
+            <th id="bondHeader" class="vert-align horiz-align">UK</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="active">
+            <th class="vert-align">A</th>
+            <th class="vert-align">10-year government bond current yields</th>
+            <th class="target1 vert-align"></th>
+            <th class="target1 vert-align"></th>
+            <th class="target1 vert-align"></th>
+          </tr>
+
+          <tr>
+            <td class="vert-align">B</td>
+            <td class="vert-align text-tab">Long-term core inflation rates </td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+          <tr>
+            <td class="vert-align">C</td>
+            <td class="vert-align text-tab">Inflation risk premium assumptions </td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+          <tr>
+            <td class="vert-align">D</td>
+            <td class="vert-align text-tab">Real rates </td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+          <tr>
+            <td class="vert-align">E</td>
+            <td class="vert-align text-tab">RPI-CPI differential </td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+
+          <tr class="active">
+            <th class="vert-align">F</th>
+            <th class="vert-align">Long-term 10-year bond yields = B + C + D + E</th>
+            <th class="target1 vert-align"></th>
+            <th class="target1 vert-align"></th>
+            <th class="target1 vert-align"></th>
+          </tr>
+
+          <tr>
+            <td class="vert-align"></td>
+            <td class="vert-align">Bond yields in 5 years’ time (interpolation between A and F based on time expected to reach normalised long-term levels from the table above and an assumed reversion path of bond yields)</td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+
+          <tr class="active">
+            <th class="vert-align"></th>
+            <th class="vert-align">Average annual 10-year government bond yields over the next five years</th>
+            <th class="target1 vert-align"></th>
+            <th class="target1 vert-align"></th>
+            <th class="target1 vert-align"></th>
+          </tr>
+
+        </tbody>
+
+      </table>
+      <div id="avgBondYieldsTableSource" class="footnote source"> </div>
+    </div>
+
+
+    <div class="center pad pBreak">
+      <div class="panel-body">
+        <h3 class="h3Header">CREDIT FIVE-YEAR RETURN ASSUMPTIONS </h3>
+        <p2>We break down our five-year credit return assumptions in the same four components we use for government bonds. We complement our yield estimates with views on high yield (HY) and investment grade (IG) credit spreads. </p2>
+      </div>
+    </div>
+
+
+    <div class="container fourteen">
+
+      <table id="creditReturnAssumpTable" class="table table-condensed table-bordered detailTable">
+        <thead>
+          <tr class="sbTable-HeaderBonds">
+            <th id="bondHeader" class="vert-align" colspan="2">COMPONENTS OF CREDIT FIVE-YEAR RETURN ASSUMPTIONS</th>
+            <th id="bondHeader" class="vert-align horiz-align">US HY</th>
+            <th id="bondHeader" class="vert-align horiz-align">US IG</th>
+            <th id="bondHeader" class="vert-align horiz-align">EU IG</th>
+            <th id="bondHeader" class="vert-align horiz-align">UK IG</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="vert-align">Yield</td>
+            <td class="vert-align">Our expectations for average annual yields over the next five years, consisting of:
+              <br>1. Average annual yields over the period of government bonds of similar duration.
+              <br>2. Average credit spreads over the period, adjusted for the risk of defaults and downgrades.
+              <br>See the table below for calculation details.
+            </td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+
+          <tr>
+            <td class="vert-align">Valuation</td>
+            <td class="vert-align">We approximate the annual valuation impact of our yield assumptions by multiplying the duration by the annualised yield change. The duration of the corporate bonds is around half of that of government bonds, making them less sensitive to rate
+              changes.
+            </td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+
+          <tr>
+            <td class="vert-align">Roll down impact</td>
+            <td class="vert-align">The maturity of a bond shortens over time. Upward sloping yield curves make this a positive valuation impact. The steeper the curve, the bigger the impact.</td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+          <tr>
+            <td rowspan="2" class="vert-align">Adjustments</td>
+            <td class="vert-align">We adjust for rounding errors and implement a subjective overlay to our model’s output.</td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+
+          <tr>
+
+            <td class="vert-align">The risk-free (cash) rate determines the overall level of returns for investors in different geographies. This table shows the numbers in US dollars, so we adjust for the different risk-free cash returns between local-currency cash and US
+              cash.</td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+
+          <tr class="active">
+            <th rowspan="2" class="vert-align">Annualised credit bond returns</th>
+            <th class="vert-align right-align">Overall geometric assumption</th>
+            <th class="target1 vert-align"></th>
+            <th class="target1 vert-align"></th>
+            <th class="target1 vert-align"></th>
+            <th class="target1 vert-align"></th>
+          </tr>
+
+          <tr class="active">
+
+            <th class="vert-align right-align">Overall arithmetic assumption</th>
+            <th class="target1 vert-align"></th>
+            <th class="target1 vert-align"></th>
+            <th class="target1 vert-align"></th>
+            <th class="target1 vert-align"></th>
+          </tr>
+        </tbody>
+      </table>
+      <div id="creditReturnAssumpTableSource" class="footnote source"> </div>
+    </div>
+    <br>
+
+    <div class="container fourteen">
+
+      <table id="avgCreditYieldsTable" class="table table-condensed table-bordered detailTable">
+        <thead>
+          <tr class="sbTable-HeaderBonds">
+            <th id="bondHeader" class="vert-align" colspan="2">DERIVING THE AVERAGE YIELD FOR CREDIT INSTRUMENTS</th>
+            <th id="bondHeader" class="vert-align horiz-align">US HY</th>
+            <th id="bondHeader" class="vert-align horiz-align">US IG</th>
+            <th id="bondHeader" class="vert-align horiz-align">EU IG</th>
+            <th id="bondHeader" class="vert-align horiz-align">UK IG</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td rowspan="2" class="vert-align">A. Current yield</td>
+            <td class="vert-align">Current annual yields of bonds of equivalent duration.</td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+          <tr>
+            <td class="vert-align ">Current spreads over government bonds.</td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+          <tr>
+            <td rowspan="2" class="vert-align">B. Future expected yield</td>
+            <td class="vert-align ">Expected annual yields of government bonds of equivalent duration in five years’ time.</td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+          <tr>
+            <td class="vert-align ">Expected spreads over government bonds in five years’ time.</td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+
+          <tr>
+            <td class="vert-align">C. Impact of defaults and downgrades</td>
+            <td class="vert-align ">Portion of credit spreads allocated to assumptions on defaults and downgrades</td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+           <tr>
+            <td class="vert-align">D. Other adjustments</td>
+            <td class="vert-align ">Adjustments due to the non-linear path of interest rate normalisation</td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+            <td class="target1 vert-align"></td>
+          </tr>
+
+
+          <tr class="active">
+            <th class="vert-align">Average annual yields over next five years</th>
+            <th class="vert-align">1/2 x (A + B) + C + D</th>
+            <th class="target1 vert-align"></th>
+            <th class="target1 vert-align"></th>
+            <th class="target1 vert-align"></th>
+            <th class="target1 vert-align"></th>
+          </tr>
+        </tbody>
+      </table>
+      <div id="avgCreditYieldsTableSource" class="footnote source"> </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
