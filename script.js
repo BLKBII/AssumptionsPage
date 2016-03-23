@@ -548,7 +548,7 @@ $(function () {
         height: 500,
               spacingTop: 30,
               marginRight: 30,
-      plotBorderWidth: 0,
+              plotBorderWidth: 0,
         animation: {
           duration: 1000
         },
@@ -607,6 +607,8 @@ $(function () {
         }
       },
       yAxis: {
+        max: 10,
+            min:0,
         title: {
           text: 'Annualised Nominal Return',
           style: {
