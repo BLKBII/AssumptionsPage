@@ -303,6 +303,10 @@ tr.shown td.details-control {
  
 }
 
+#comparisonChart {
+  display:none;
+}
+
 .h3Header {
    font-weight: bold;
   color: rgb(0,102,68);
@@ -324,7 +328,7 @@ table {
 
 
 
-#USD, #EUR, #GBP, #CHF, #fiveYear, #tenYear {
+#USD, #EUR, #GBP, #CHF, #fiveYear, #tenYear, #comparison {
   background-color: rgb(245,245,245);
 }
 
