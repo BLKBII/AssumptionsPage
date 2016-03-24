@@ -260,7 +260,7 @@ var Dtable = $(document).ready(function() {
     rtnTable.columns.adjust().draw(); // Redraw the table
   }
 
-console.log(assumpData);
+
  var scatterData;
   var fixedIncomeScatterData = [];
   var equityScatterData = [];
