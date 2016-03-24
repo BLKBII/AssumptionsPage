@@ -35,6 +35,8 @@ $(document).ready(function() {
   $(".se-pre-con").fadeOut("slow"); // Loading screen
 });
 
+
+
 //Print icon function
 function printer() {
  var schart = $('#scatterChart').highcharts();
@@ -311,6 +313,9 @@ function updateScatterData(){
     });
     chart.series[2].setData(altScatterData);
   }
+  
+
+
 
 //CONTROLS FOR CURRENCY BUTTONS
   $("#USD").click(function() {
@@ -382,6 +387,8 @@ function updateScatterData(){
   $("#fiveYear").click(function() {
     //change classes
     if ($(this).attr('class') !== "active") {
+       $('#comparisonChart').hide();
+      $('#scatterChart').fadeIn();
       $(".sbutton").removeClass('active');
       $(".sbutton").addClass('hidden-print');
       $(this).addClass('active');
@@ -395,6 +402,8 @@ function updateScatterData(){
 
   $("#tenYear").click(function() {
     if ($(this).attr('class') !== "active") {
+      $('#comparisonChart').hide(); 
+       $('#scatterChart').fadeIn();
     $(".sbutton").removeClass('active');
       $(".sbutton").addClass('hidden-print');
       $(this).addClass('active');
@@ -405,6 +414,25 @@ function updateScatterData(){
 
     }
   });
+  
+   $("#comparison").click(function() {
+      if ($(this).attr('class') !== "active") {
+      $('#scatterChart').hide();
+       $('#comparisonChart').fadeIn();
+    $(".sbutton").removeClass('active');
+      $(".sbutton").addClass('hidden-print');
+      $(this).addClass('active');
+      $(this).removeClass('hidden-print');
+
+ 
+
+     return false;
+     
+      }
+   });
+   
+
+
 
   // TIME SERIES CHART
   timeSeries = tsData;
@@ -417,6 +445,7 @@ function updateScatterData(){
     $('#equityChart').highcharts({
       chart: {
         height: 400,
+    
         marginRight: 30,
          spacingTop: -10,
         spacingLeft: 0,
@@ -679,7 +708,136 @@ $(function () {
  
 });
 
+//HIDDEN COMPARISON CHART
+
+ var comparisonDataName = [];
+ var comparisonData = [];
+ var comparisonData1Q = [];
+ var comparisonDataColor = [];
+ //   var wid = $('#scatterChart').width();
+  
  
+  $.each(scatterData, function(i, item) {
+    comparisonDataName.push(item.name);
+   comparisonData.push(item.fiveER);
+   comparisonData1Q.push(item.tenER);
+   comparisonDataColor.push(item.color);
+  });
+
+
+
+$(function () {
+  
+ 
+    $('#comparisonChart').highcharts({
+        chart: {
+            type: 'column',
+             height: 500,
+      
+              spacingTop: 30,
+              marginRight: 30,
+              plotBorderWidth: 0,
+        },
+      credits: {
+        enabled: false
+      },
+        legend: {
+              enabled: true,
+              marginRight: 100,
+      
+           align: 'left',
+           verticalAlign: 'top',
+        itemStyle: {
+          fontSize: '14px',
+          fontWeight: 'normal',
+          fontFamily: 'AkkuratProRegular, Arial, Sans-Serif',
+          color: '#337ab7'
+        }
+      },
+        title: {
+            text: ''
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            categories: comparisonDataName ,
+            crosshair: true,
+             labels: {
+          style: {
+            fontSize: '12px',
+            fontFamily: 'AkkuratProRegular, Arial, Sans-Serif',
+            color: 'rgb(79, 78, 80)'
+          },
+          rotation: 270
+  
+        }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+          text: 'Annualised Nominal Return',
+          style: {
+            fontSize: '12px',
+            fontFamily: 'AkkuratProRegular, Arial, Sans-Serif',
+            color: 'rgb(79, 78, 80)'
+          },
+        },
+        labels: {
+          style: {
+            fontSize: '12px',
+            fontFamily: 'AkkuratProRegular, Arial, Sans-Serif',
+            color: 'rgb(79, 78, 80)'
+          },
+          format: '{value} %'
+        },
+        
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:14px; font-family : AkkuratProRegular, Arial, Sans-Serif; color :rgb(79, 78, 80)">{point.key}</span><table>',
+            pointFormat: '<tr><td style="font-size:14px; font-family : AkkuratProRegular, Arial, Sans-Serif; color :rgb(79, 78, 80)">{series.name}: </td>' +
+                '<td style="font-size:14px; font-family : AkkuratProRegular, Arial, Sans-Serif; color :rgb(79, 78, 80)"><b>{point.y:.1f}%</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0,
+
+            },
+            
+            series: {
+               colorByPoint: true,
+               colors: comparisonDataColor,
+                  marker: {
+                    fillColor: '#FFFFFF',
+                    lineWidth: 2,
+                      radius: 6,
+                    lineColor: null // inherit from series
+                }
+            },
+            
+            
+        },
+         series: [{
+            name: 'This Quarter',
+            data: comparisonData
+        
+        },
+        {
+            name: 'Last Quarter',
+            data: comparisonData1Q,
+            type: 'spline'
+        
+        }]
+    });
+});
+
+
+
+
 });
 
 
